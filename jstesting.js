@@ -12,6 +12,14 @@ const printTestResult = ({ testDescription, functionOutput, testPassed }) => {
 }
 
 const test = (testDescription, { functionToTesting, functionOutput }) => {
+  if(typeof functionToTesting == 'object' || typeof functionOutput == 'object') {
+    if(`${functionToTesting}` == `${functionOutput}`) {
+      printTestResult({
+        testDescription, functionOutput, testPassed: true
+      })
+      return true
+    }
+  }
   if(functionToTesting === functionOutput) {
     printTestResult({
       testDescription, functionOutput, testPassed: true
@@ -23,12 +31,3 @@ const test = (testDescription, { functionToTesting, functionOutput }) => {
     })
   return false
 }
-
-const sum = (a, b) => a+b
-
-test('', {
-  functionToTesting: sum(2, 2), functionOutput: 4
-})
-test('Al sumar 10 mas quice el resultado es 15.', {
-  functionToTesting: sum(10, 5), functionOutput: 15
-})
