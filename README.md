@@ -25,7 +25,7 @@ Your function did a GOOD WORK :)
 > no description
 > The funtion returned: 4
   
-Your function did a GOOD WORK :)
-> Al sumar 10 mas quice el resultado es 15.
+Your function did a GOOD WORK :|
+> adds 10 + 5 to equal 15
 > The funtion returned: 15
 ```
