@@ -9,25 +9,25 @@ const printTestResult = ({ testDescription, functionOutput, testPassed }) => {
 }
 
 
-const test = (testDescription, { functionToTesting, functionOutput }) => {
+const test = (testDescription, { functionOutput, expectFunctionOutput }) => {
   if(!devMode) return true
 
-  if(typeof functionToTesting == 'object' || typeof functionOutput == 'object') {
-    if(`${functionToTesting}` == `${functionOutput}`) {
+  if(typeof functionOutput == 'object' || typeof expectFunctionOutput == 'object') {
+    if(`${functionOutput}` == `${expectFunctionOutput}`) {
       printTestResult({
-        testDescription, functionOutput, testPassed: true
+        testDescription, expectFunctionOutput, testPassed: true
       })
       return true
     }
   }
-  if(functionToTesting === functionOutput) {
+  if(functionOutput === expectFunctionOutput) {
     printTestResult({
-      testDescription, functionOutput, testPassed: true
+      testDescription, expectFunctionOutput, testPassed: true
     })
     return true
   }
   printTestResult({
-      testDescription, functionOutput, testPassed: false
+      testDescription, expectFunctionOutput, testPassed: false
     })
   return false
 }
