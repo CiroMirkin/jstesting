@@ -1,7 +1,4 @@
 "use strict"
-
-let devMode = true;
-
 const printGreenTestResult = ({ testDescription, functionOutput }) => {
 	console.log(`\nGOOD work\n`)
   console.log(`> ${!testDescription ? 'no description': testDescription}\n`)
@@ -13,6 +10,7 @@ const printRedTestResult = ({ testDescription, functionOutput }) => {
   console.log(`> 'The function doesnt return' ${functionOutput}`)
 }
 
+let devMode = true;
 const test = (testDescription, { functionOutput, expectFunctionOutput }) => {
   if(!devMode) return true
 
