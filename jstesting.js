@@ -1,13 +1,13 @@
 "use strict"
-const printGreenTestResult = ({ testDescription, functionOutput }) => {
+const printGreenTestResult = ({ testDescription, expectFunctionOutput }) => {
 	console.log(`\nGOOD work\n`)
   console.log(`> ${!testDescription ? 'no description': testDescription}\n`)
-  console.log(`> 'The funtion returned:' ${functionOutput}`)
+  console.log(`> 'The funtion returned:' ${expectFunctionOutput}`)
 }
-const printRedTestResult = ({ testDescription, functionOutput }) => {
+const printRedTestResult = ({ testDescription, expectFunctionOutput }) => {
 	console.log(`\nBAD work\n`)
   console.log(`> ${!testDescription ? "none, you're a *****": testDescription}\n`)
-  console.log(`> 'The function doesnt return' ${functionOutput}`)
+  console.log(`> 'The function doesnt return' ${expectFunctionOutput}`)
 }
 
 let devMode = true;
