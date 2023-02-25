@@ -5,9 +5,9 @@ const printGreenTestResult = ({ testDescription, expectFunctionOutput }) => {
   console.log(`> 'The funtion returned:' ${expectFunctionOutput}`)
 }
 const printRedTestResult = ({ testDescription, expectFunctionOutput }) => {
-	console.log(`\nBAD work\n`)
-  console.log(`> ${!testDescription ? "none, you're a *****": testDescription}\n`)
-  console.log(`> 'The function doesnt return' ${expectFunctionOutput}`)
+	console.log(`\nAWFUL\n`)
+  console.log(`> ${!testDescription ? "no description, you're a *****": testDescription}\n`)
+  console.log(`> 'The function did'nt return:' ${expectFunctionOutput}`)
 }
 
 let devMode = true;
