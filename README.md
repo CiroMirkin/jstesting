@@ -21,11 +21,11 @@ test('adds 10 + 5 to equal 15', {
 Result of test:
 
 ```
-Your function did a GOOD WORK :)
+GOOD work
 > no description
 > The funtion returned: 4
   
-Your function did a GOOD WORK :|
+AWFUL
 > adds 10 + 5 to equal 15
-> The funtion returned: 15
+> The function did'nt return: 15
 ```
